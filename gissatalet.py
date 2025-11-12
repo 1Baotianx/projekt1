@@ -1,5 +1,5 @@
 # '''
-# FILNAMN.PY: Beskrivning av fil/program
+# gissatalet.py: Gissa Talet Spel
 
 # __author__  = "Eric Botander"
 # __version__ = "1.0.0"
