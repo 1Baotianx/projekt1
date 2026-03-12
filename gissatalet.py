@@ -19,10 +19,27 @@ while playing: #loop att man är i spelet
     os.system('cls') 
 
     tries = 7 # hur många försök man har
-    secret_number = random.randint(1,100) # generera ett tal man ska gissa
+    
 
 
-    while tries > 0: #att spelet är igång om man har mer försök än 0 så att det slutar när man har för lite försök
+    while tries > -1: #att spelet är igång om man har mer försök än 0 så att det slutar när man har för lite försök
+
+        secret_number = random.randint(1,100) # generera ett tal man ska gissa
+
+        if tries == 0:
+            print("Du gissade tyvärr inte rätt.")
+            yesno = input("Vill du spela igen j/n?: ")
+                
+            if yesno.upper() == "J": # så att spelaren får välja om den vill spela igen eller inte
+                tries = 7
+                continue 
+            elif yesno.upper() == "N": # så spelaren kan avsluta spelet
+                playing = False
+                break
+            else:
+                os.system('cls')
+                print("Du skrev inte in J eller N. Spela igen eller Skriv 0 för att avsluta.") #motverkar error och ger instruktioner 
+                continue
 
         try:
             guess = int(input("(Skriv 0 för att avsluta) Gissa Talet mellan 1-100:")) #kollar så att de man skriver in är en integer
@@ -37,7 +54,7 @@ while playing: #loop att man är i spelet
                 
             if yesno.upper() == "J": # så att spelaren får välja om den vill spela igen eller inte
                 continue 
-            elif yesno.upper() == "N":
+            elif yesno.upper() == "N": #Så spelaren kan avsluta
                 playing = False
                 break
             else:
