@@ -27,7 +27,7 @@ while playing: #loop att man är i spelet
         secret_number = random.randint(1,100) # generera ett tal man ska gissa
 
         if tries == 0:
-            print(f"Du gissade tyvärr inte rätt. Talet var {secret_number}")
+            print(f"Du gissade tyvärr inte rätt. Talet var {secret_number}") # Om man gissar fel får man chansen att spela igen
             yesno = input("Vill du spela igen j/n?: ")
                 
             if yesno.upper() == "J": # så att spelaren får välja om den vill spela igen eller inte
