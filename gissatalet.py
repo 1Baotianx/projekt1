@@ -45,7 +45,7 @@ while playing: #loop att man är i spelet
                 print("Du skrev inte in J eller N. Spela igen eller Skriv 0 för att avsluta.") #motverkar error och ger instruktioner 
                 continue
 
-        elif guess == 0: # om man skriver 0 så avslutas spelet 
+        elif guess == 0: # om man skriver 0 så avslutas spelet
             playing = False
             break
                      
